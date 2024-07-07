@@ -184,12 +184,13 @@ export const useGetPosts = () => {
 
       return lastId;
     },
+    // initialPageParam: null,
   });
 };
 
 export const useSearchPosts = (searchTerm: string) => {
   return useQuery({
-    queryKey: [QUERY_KEYS.SEARCH_POSTS],
+    queryKey: [QUERY_KEYS.SEARCH_POSTS, searchTerm],
     queryFn: () => searchPosts(searchTerm),
     enabled: !!searchTerm,
   });

@@ -5,7 +5,7 @@ import { useUserContext } from "@/context/AuthContext";
 import PostStats from "./PostStats";
 
 type GridPostListProps = {
-  post: Models.Document[];
+  posts: Models.Document[];
   showUser?: boolean;
   showStats?: boolean;
 };
